@@ -9,8 +9,6 @@ from sklearn.preprocessing import StandardScaler
 from streamlit_option_menu import option_menu
 from pathlib import Path
 
-def main():
-    st.title("STARBOOK")
      
 # --- USER AUTHENTICATION ---
 names = ["Peter Parker", "Rebecca Miller"]
@@ -123,84 +121,84 @@ if authentication_status:
             st.experimental_set_query_params(page=app_name)
     
             # Fungsi untuk mendapatkan rekomendasi
-           def get_svd_recommendations(user_id, preds_df, user_book_matrix, num_recommendations=5):
-               try:
-                   # Mendapatkan prediksi rating untuk pengguna tertentu
-                   user_row_number = user_id
+        def get_svd_recommendations(user_id, preds_df, user_book_matrix, num_recommendations=5):
+            try:
+                # Mendapatkan prediksi rating untuk pengguna tertentu
+                user_row_number = user_id
                    
-                  # Mendapatkan buku yang telah di-rating oleh pengguna
-                   sorted_user_predictions = preds_df.loc[user_row_number].sort_values(ascending=False)
+                # Mendapatkan buku yang telah di-rating oleh pengguna
+                sorted_user_predictions = preds_df.loc[user_row_number].sort_values(ascending=False)
                    
-                   # Mendapatkan data asli user yang sudah di-rating
-                   user_data = user_book_matrix.loc[user_row_number]
+                # Mendapatkan data asli user yang sudah di-rating
+                user_data = user_book_matrix.loc[user_row_number]
                    
-                   # Buku yang belum di-rating oleh user
-                   recommendations = pd.concat([user_data, sorted_user_predictions], axis=1)
-                   recommendations.columns = ['actual', 'score']
-                   recommendations = recommendations[recommendations['actual'] == 0]
+                # Buku yang belum di-rating oleh user
+                recommendations = pd.concat([user_data, sorted_user_predictions], axis=1)
+                recommendations.columns = ['actual', 'score']
+                recommendations = recommendations[recommendations['actual'] == 0]
                    
-                   # Mengambil top-n rekomendasi
-                   top_recommendations = recommendations.sort_values('score', ascending=False).head(num_recommendations)
+                # Mengambil top-n rekomendasi
+                top_recommendations = recommendations.sort_values('score', ascending=False).head(num_recommendations)
            
-                   # Menghilangkan kolom 'actual'
-                   top_recommendations = top_recommendations[['score']]
+                # Menghilangkan kolom 'actual'
+                top_recommendations = top_recommendations[['score']]
                    
-                   return top_recommendations
-               except KeyError:
-                   st.error("User ID tidak ditemukan.")
-                   return pd.DataFrame()
+                return top_recommendations
+            except KeyError:
+                st.error("User ID tidak ditemukan.")
+                return pd.DataFrame()
    
            # Fungsi utama untuk aplikasi Streamlit
-           def main():
-               # Memuat data dari file CSV
-               df = pd.read_csv("df.csv")  # Pastikan file ini memiliki kolom 'user_id', 'book_id', 'rating', dan 'original_title'
+        def main():
+            # Memuat data dari file CSV
+            df = pd.read_csv("df.csv")  # Pastikan file ini memiliki kolom 'user_id', 'book_id', 'rating', dan 'original_title'
                
-               # Menghapus duplikat dengan mengagregasi rating yang ada
-               df_ratings = df.groupby(['user_id', 'book_id']).agg({'rating': 'mean'}).reset_index()
-           
-               # Membuat matriks user-book
-               user_book_matrix = df_ratings.pivot(index='user_id', columns='book_id', values='rating').fillna(0)
+            # Menghapus duplikat dengan mengagregasi rating yang ada
+            df_ratings = df.groupby(['user_id', 'book_id']).agg({'rating': 'mean'}).reset_index()
+            
+            # Membuat matriks user-book
+            user_book_matrix = df_ratings.pivot(index='user_id', columns='book_id', values='rating').fillna(0)
                
-               # Melakukan SVD
-               R = user_book_matrix.values
-               user_ratings_mean = R.mean(axis=1)
-               R_demeaned = R - user_ratings_mean.reshape(-1, 1)
+            # Melakukan SVD
+            R = user_book_matrix.values
+            user_ratings_mean = R.mean(axis=1)
+            R_demeaned = R - user_ratings_mean.reshape(-1, 1)
                 
-               U, sigma, Vt = svds(R_demeaned, k=50)  # Anda dapat menyesuaikan nilai k sesuai kebutuhan
-               sigma = np.diag(sigma)
+            U, sigma, Vt = svds(R_demeaned, k=50)  # Anda dapat menyesuaikan nilai k sesuai kebutuhan
+            sigma = np.diag(sigma)
                
-               all_user_predicted_ratings = np.dot(np.dot(U, sigma), Vt) + user_ratings_mean.reshape(-1, 1)
-               preds_df = pd.DataFrame(all_user_predicted_ratings, columns=user_book_matrix.columns, index=user_book_matrix.index)
+            all_user_predicted_ratings = np.dot(np.dot(U, sigma), Vt) + user_ratings_mean.reshape(-1, 1)
+            preds_df = pd.DataFrame(all_user_predicted_ratings, columns=user_book_matrix.columns, index=user_book_matrix.index)
             
     
     
-              # Input user ID
-               user_id = st.number_input("Masukkan User ID:", min_value=0, step=1)
+            # Input user ID
+            user_id = st.number_input("Masukkan User ID:", min_value=0, step=1)
             
-              if st.button("Dapatkan Rekomendasi"):
-                   # Memanggil fungsi get_svd_recommendations
-                   recommendations = get_svd_recommendations(user_id, preds_df, user_book_matrix)
+            if st.button("Dapatkan Rekomendasi"):
+                # Memanggil fungsi get_svd_recommendations
+                recommendations = get_svd_recommendations(user_id, preds_df, user_book_matrix)
                    
-                   if not recommendations.empty:
-                       # Mendapatkan daftar rekomendasi
-                       List = recommendations.index.to_list()
+                if not recommendations.empty:
+                    # Mendapatkan daftar rekomendasi
+                    List = recommendations.index.to_list()
                        
-                       # Menggabungkan data buku untuk mendapatkan judul buku dari rekomendasi
-                       temp = []
-                       for book_id in List:    
-                           result = df[df['book_id'] == book_id].iloc[0]
-                           temp.append(result['original_title'])
+                    # Menggabungkan data buku untuk mendapatkan judul buku dari rekomendasi
+                    temp = []
+                    for book_id in List:    
+                        result = df[df['book_id'] == book_id].iloc[0]
+                        temp.append(result['original_title'])
                         
-                       data = {
-                           'book_id': List,
-                           'title': temp   
-                       }
+                    data = {
+                        'book_id': List,
+                        'title': temp   
+                    }
                        
-                       result = pd.DataFrame(data)
-                       st.write("Rekomendasi Buku untuk User ID", user_id)
-                       st.table(result)
-                   else:
-                       st.write("Tidak ada rekomendasi yang tersedia untuk pengguna ini.")
+                    result = pd.DataFrame(data)
+                    st.write("Rekomendasi Buku untuk User ID", user_id)
+                    st.table(result)
+                else:
+                    st.write("Tidak ada rekomendasi yang tersedia untuk pengguna ini.")
                 
        if selected == "Profil Pengembang":
            st.title(f"Mari berkenalan dengan kami {selected}")
@@ -216,5 +214,5 @@ if authentication_status:
            """)
 
 
-if __name__ == "__main__":
-    main()
+        if __name__ == "__main__":
+            main()
