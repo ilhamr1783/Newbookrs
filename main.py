@@ -32,7 +32,7 @@ if authentication_status == None:
 
 if authentication_status:
 
-    def streamlit_menu():
+def streamlit_menu():
     # horizontal menu w/o custom style
     selected = option_menu(
         menu_title=None,  # required
