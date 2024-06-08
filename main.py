@@ -227,7 +227,10 @@ if authentication_status:
             - **Novita Nur Alifah** - Universitas Cendekia Abditama
             - **Devi Koestri Elviani** - Universitas Negeri Jember
         """)
-        
-# Menjalankan aplikasi Streamlit
+
+def main():
+    st.title("Aplikasi Streamlit Saya")
+    # Tambahkan kode aplikasi Streamlit Anda di sini
+
 if __name__ == "__main__":
     main()
