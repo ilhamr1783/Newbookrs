@@ -221,10 +221,10 @@ if authentication_status:
             Berikut adalah profil dari tim pengembang yang berkontribusi dalam pembuatan website ini:
 
         - **Ifanda Ariel Pradana Aji** - Project Manager & Programmer 
-        - **Ilham Ramadhan** - Cybersecurity  & Web Developer
+        - **Ilham Ramadhan** - Business Analyst  & Web Developer
         - **Thadeo Miftakhul Fauzi** - UI/UX Designer & Programmer 
         - **Novita Nur Alifah** - Web Developer & Cybersecurity
-        - **Devi Koestri Elviani** - Business Analyst
+        - **Devi Koestri Elviani** 
         """)
         # Appreciation section
         st.header("Ucapan Terima Kasih")
