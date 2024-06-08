@@ -32,17 +32,17 @@ if authentication_status == None:
 
 if authentication_status:
 
-def streamlit_menu():
+    def streamlit_menu():
     # horizontal menu w/o custom style
-    selected = option_menu(
-        menu_title=None,  # required
-        options=["Home", "Projects", "Contact"],  # required
-        icons=["house", "book", "envelope"],  # optional
-        menu_icon="cast",  # optional
-        default_index=0,  # optional
-        orientation="horizontal",
-    )
-    return selected
+        selected = option_menu(
+            menu_title=None,  # required
+            options=["Home", "Projects", "Contact"],  # required
+            icons=["house", "book", "envelope"],  # optional
+            menu_icon="cast",  # optional
+            default_index=0,  # optional
+            orientation="horizontal",
+        )
+        return selected
     
     if selected == "Home":
         st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website {selected}")
