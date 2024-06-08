@@ -112,7 +112,7 @@ if authentication_status:
                    position: fixed;
                    bottom: 0;
                    width: 100%;
-                   background-color: #add8e6;
+                   background-color: #ff0000;
                    text-align: center;
                    padding: 10px;
                 }
