@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 from streamlit_option_menu import option_menu
 from pathlib import Path
 
- def main():
+def main():
     st.title("STARBOOK")
      
 # --- USER AUTHENTICATION ---
