@@ -33,7 +33,7 @@ if authentication_status == None:
 if authentication_status:
 
     def main():
-    st.title("STARBOOK")
+        st.title("STARBOOK")
     # Tambahkan kode aplikasi Streamlit Anda di sini
 
     def streamlit_menu():
