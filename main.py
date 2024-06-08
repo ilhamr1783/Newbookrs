@@ -87,7 +87,7 @@ if authentication_status:
                    background-color: #eeeeee; /* White background for widgets */
             }
             .st-cq {
-                background-color: #cccccc; /* Blue background for chat input */
+                background-color: #cccccc; /* Red background for chat input */
                 border-radius: 10px; /* Add rounded corners */
                 padding: 8px 12px; /* Add padding for input text */
                 color: black; /* Set text color */
@@ -221,9 +221,9 @@ if authentication_status:
             Berikut adalah profil dari tim pengembang yang berkontribusi dalam pembuatan website ini:
 
         - **Ifanda Ariel Pradana Aji** - Project Manager & Programmer 
-        - **Ilham Ramadhan** - UI/UX Designer  & Web Developer
+        - **Ilham Ramadhan** - Cybersecurity  & Web Developer
         - **Thadeo Miftakhul Fauzi** - UI/UX Deigner & Programmer 
-        - **Novita Nur Alifah** - Web Developer & Programmer
+        - **Novita Nur Alifah** - Web Developer & Cybersecurity
         - **Devi Koestri Elviani** - Business Analyst
         """)
         # Appreciation section
