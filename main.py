@@ -37,11 +37,11 @@ if authentication_status:
 
     # Tambahkan kode aplikasi Streamlit Anda di sini
 
-with st.sidebar:
-    selected = option_menu(
-    menu_title="Main Menu",  # required
-    options=["Home", "Latar Belakang", "Contact"],
-    )# required
+    with st.sidebar:
+        selected = option_menu(
+        menu_title="Main Menu",  # required
+        options=["Home", "Latar Belakang", "Contact"],
+        )# required
     
     if selected == "Home":
         st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website {selected}")
@@ -51,17 +51,17 @@ with st.sidebar:
             Kami menyediakan berbagai macam rekomendasi dari berbagai genre dan kategori, sehingga Anda dapat dengan mudah 
             menemukan buku yang Anda sukai. Selamat menjelajahi dan semoga Anda menemukan banyak buku menarik untuk dibaca!
             """)
-        if selected == "Latar Belakang":
-            st.title(f"Latar Belakang {selected}")
+    if selected == "Latar Belakang":
+        st.title(f"Latar Belakang {selected}")
     # Additional description
-            st.write("""
-                Website ini hadir dengan latar belakang untuk memberikan rekomendasi buku yang sesuai dengan minat dan 
-                kebutuhan pembaca. Dengan banyaknya pilihan buku yang tersedia, kami ingin membantu Anda menemukan 
-                buku-buku yang berkualitas dan sesuai dengan selera Anda. Dengan memanfaatkan teknologi dan data, 
-                kami dapat memberikan rekomendasi yang lebih personal dan relevan. Selamat menemukan buku-buku baru 
-                yang menarik dan bermanfaat!
-        """)   
-        if selected == "Unique Value":
+        st.write("""
+            Website ini hadir dengan latar belakang untuk memberikan rekomendasi buku yang sesuai dengan minat dan 
+            kebutuhan pembaca. Dengan banyaknya pilihan buku yang tersedia, kami ingin membantu Anda menemukan 
+            buku-buku yang berkualitas dan sesuai dengan selera Anda. Dengan memanfaatkan teknologi dan data, 
+            kami dapat memberikan rekomendasi yang lebih personal dan relevan. Selamat menemukan buku-buku baru 
+            yang menarik dan bermanfaat!
+            """)   
+    if selected == "Unique Value":
             st.title(f"Unique Value {selected}")
             st.write("""
                 Di website ini, kami memberikan nilai unik yang membedakan kami dari platform rekomendasi buku lainnya. Berikut adalah beberapa fitur unggulan kami:
