@@ -45,7 +45,7 @@ if authentication_status:
         st.title(f"Selamat Datang Di STARBOOK")
         st.markdown("""
                <div style='display: flex; align-items: center; gap: 15px;'>
-                   <h1 style='margin: 0;'>A Book Recommendation System</h1>
+                   <h2 style='margin: 0;'>A Book Recommendation System</h2>
             </div>
         """, unsafe_allow_html=True) 
     # Additional description
