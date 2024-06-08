@@ -222,7 +222,7 @@ if authentication_status:
 
         - **Ifanda Ariel Pradana Aji** - Project Manager & Programmer 
         - **Ilham Ramadhan** - Cybersecurity  & Web Developer
-        - **Thadeo Miftakhul Fauzi** - UI/UX Deigner & Programmer 
+        - **Thadeo Miftakhul Fauzi** - UI/UX Designer & Programmer 
         - **Novita Nur Alifah** - Web Developer & Cybersecurity
         - **Devi Koestri Elviani** - Business Analyst
         """)
