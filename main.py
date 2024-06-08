@@ -9,6 +9,9 @@ from sklearn.preprocessing import StandardScaler
 from streamlit_option_menu import option_menu
 from pathlib import Path
 
+ def main():
+    st.title("STARBOOK")
+     
 # --- USER AUTHENTICATION ---
 names = ["Peter Parker", "Rebecca Miller"]
 usernames = ["pparker", "rmiller"]
@@ -32,8 +35,6 @@ if authentication_status == None:
 
 if authentication_status:
 
-    def main():
-        st.title("STARBOOK")
     # Tambahkan kode aplikasi Streamlit Anda di sini
 
     def streamlit_menu():
