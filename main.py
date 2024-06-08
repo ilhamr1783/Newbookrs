@@ -44,14 +44,14 @@ if authentication_status:
         )
         return selected
     
-    if selected == "Home":
-        st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website {selected}")
-# Additional description
-        st.write("""
-            Website ini dirancang untuk membantu Anda menemukan rekomendasi buku terbaik sesuai dengan preferensi Anda. 
-            Kami menyediakan berbagai macam rekomendasi dari berbagai genre dan kategori, sehingga Anda dapat dengan mudah 
-            menemukan buku yang Anda sukai. Selamat menjelajahi dan semoga Anda menemukan banyak buku menarik untuk dibaca!
-        """)
+        if selected == "Home":
+            st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website {selected}")
+    # Additional description
+            st.write("""
+                Website ini dirancang untuk membantu Anda menemukan rekomendasi buku terbaik sesuai dengan preferensi Anda. 
+                Kami menyediakan berbagai macam rekomendasi dari berbagai genre dan kategori, sehingga Anda dapat dengan mudah 
+                menemukan buku yang Anda sukai. Selamat menjelajahi dan semoga Anda menemukan banyak buku menarik untuk dibaca!
+            """)
     if selected == "Latar Belakang":
         st.title(f"Latar Belakang {selected}")
 # Additional description
