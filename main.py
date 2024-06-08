@@ -63,7 +63,7 @@ if authentication_status:
         """)   
     if selected == "Unique Value":
         st.title(f"Unique Value {selected}")
-            st.write("""
+        st.write("""
             Di website ini, kami memberikan nilai unik yang membedakan kami dari platform rekomendasi buku lainnya. Berikut adalah beberapa fitur unggulan kami:
                 
             - **Personalisasi Rekomendasi:** Buku yang direkomendasikan sesuai dengan minat individu.
