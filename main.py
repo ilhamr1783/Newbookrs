@@ -126,6 +126,17 @@ if authentication_status:
                    <p>Developed with ❤ by Team 23</p>
             </div> 
         """, unsafe_allow_html=True)
+        st.markdown(
+             """
+            <style>
+            input[type=number] {
+            background-color: #add8e6; /* Warna latar belakang biru muda */
+            color: black; /* Warna teks hitam */
+            border-radius: 5px; /* Sudut melengkung */
+            padding: 5px; /* Padding */
+            }
+          </style>
+        """,unsafe_allow_html=True) 
     
             # Create functions to open each social media app
         def open_app(app_name):
