@@ -199,7 +199,8 @@ if authentication_status:
                     st.table(result)
                 else:
                     st.write("Tidak ada rekomendasi yang tersedia untuk pengguna ini.")
-                     
+          if __name__ == "__main__":
+               main()
     if selected == "Profil Pengembang":
         st.title(f"Profil Pengembang")
     # Additional description
@@ -214,5 +215,4 @@ if authentication_status:
         """)                 
 
 
-          if __name__ == "__main__":
-              main()
+     
