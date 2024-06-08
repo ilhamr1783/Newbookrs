@@ -42,7 +42,7 @@ if authentication_status:
         )# required
     
     if selected == "Home":
-        st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website {selected}")
+        st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website")
     # Additional description
         st.write("""
             Website ini dirancang untuk membantu Anda menemukan rekomendasi buku terbaik sesuai dengan preferensi Anda. 
