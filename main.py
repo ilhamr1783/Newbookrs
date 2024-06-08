@@ -7,13 +7,15 @@ from scipy.sparse.linalg import svds
 from sklearn.decomposition import TruncatedSVD
 from sklearn.preprocessing import StandardScaler
 from streamlit_option_menu import option_menu
+from pathlib import Path
 
 # --- USER AUTHENTICATION ---
 names = ["Peter Parker", "Rebecca Miller"]
 usernames = ["pparker", "rmiller"]
 
+
 # load hashed passwords
-file_path = Path(__file__).parent / "hashed_pw.pkl"
+file_path = Path.cwd() / "hashed_pw.pkl"
 with file_path.open("rb") as file:
     hashed_passwords = pickle.load(file)
 
