@@ -10,12 +10,12 @@ from streamlit_option_menu import option_menu
 from pathlib import Path
 
      
-# --- USER AUTHENTICATION ---
+# User Authentication
 names = ["Kelompok 23", "Team 23"]
 usernames = ["kelompok23", "team23"]
 
 
-# load hashed passwords
+# muat hashed passwords
 file_path = Path.cwd() / "hashed_pw.pkl"
 with file_path.open("rb") as file:
     hashed_passwords = pickle.load(file)
@@ -42,7 +42,12 @@ if authentication_status:
         )# required
     
     if selected == "Home":
-        st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website")
+        st.title(f"Selamat Datang Di STARBOOK")
+        st.markdown("""
+               <div style='display: flex; align-items: center; gap: 15px;'>
+                   <h1 style='margin: 0;'>A Book Recommendation System</h1>
+            </div>
+        """, unsafe_allow_html=True) 
     # Additional description
         st.write("""
             Website ini dirancang untuk membantu Anda menemukan rekomendasi buku terbaik sesuai dengan preferensi Anda. 
