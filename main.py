@@ -32,29 +32,9 @@ if authentication_status == None:
 
 if authentication_status:
 
-    def streamlit_menu(example=1):
-        if example == 3:
-            # 2. horizontal menu with custom style
-            selected = option_menu(
-                menu_title=None,  # required
-                options=["Home", "Latar Belakang", "Unique Value", "Buku Untuk Kamu", "Profil Pengembang"],  # required
-                menu_icon="cast",  # optional
-                default_index=0,  # optional
-                orientation="horizontal",
-                styles={
-                    "container": {"padding": "0!important", "background-color": "#fafafa"},
-                    "icon": {"color": "orange", "font-size": "25px"},
-                    "nav-link": {
-                        "font-size": "25px",
-                        "text-align": "left",
-                        "margin": "0px",
-                        "--hover-color": "#eee",
-                    },
-                    "nav-link-selected": {"background-color": "green"},
-                },
-            )
-            return selected
-
+    def main():
+    selected = st.sidebar.radio("Navigation", ["Home", "Latar Belakang", "Unique Value", "Buku Untuk Kamu", "Profil Pengembang" ])
+    
     if selected == "Home":
         st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website {selected}")
 # Additional description
