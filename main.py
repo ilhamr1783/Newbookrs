@@ -33,6 +33,7 @@ if authentication_status == None:
 if authentication_status:
 
     def main():
+    # Indentasi untuk blok kode berikutnya
     selected = st.sidebar.radio("Navigation", ["Home", "Latar Belakang", "Unique Value", "Buku Untuk Kamu", "Profil Pengembang" ])
     
     if selected == "Home":
