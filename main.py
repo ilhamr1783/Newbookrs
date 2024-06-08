@@ -38,7 +38,7 @@ if authentication_status:
     with st.sidebar:
         selected = option_menu(
         menu_title="Main Menu",  # required
-        options=["Home", "Latar Belakang", "Unique Value", "Buku Untuk Kamu"],
+        options=["Home", "Latar Belakang", "Unique Value", "Buku Untuk Kamu", "Profil Pengembang"],
         )# required
     
     if selected == "Home":
@@ -50,7 +50,7 @@ if authentication_status:
             menemukan buku yang Anda sukai. Selamat menjelajahi dan semoga Anda menemukan banyak buku menarik untuk dibaca!
         """)
     if selected == "Latar Belakang":
-        st.title(f"Latar Belakang {selected}")
+        st.title(f"Latar Belakang")
     # Additional description
         st.write("""
             Website ini hadir dengan latar belakang untuk memberikan rekomendasi buku yang sesuai dengan minat dan 
@@ -60,7 +60,7 @@ if authentication_status:
             yang menarik dan bermanfaat!
         """)   
     if selected == "Unique Value":
-        st.title(f"Unique Value {selected}")
+        st.title(f"Unique Value")
         st.write("""
             Di website ini, kami memberikan nilai unik yang membedakan kami dari platform rekomendasi buku lainnya. Berikut adalah beberapa fitur unggulan kami:
                 
@@ -199,6 +199,19 @@ if authentication_status:
                     st.table(result)
                 else:
                     st.write("Tidak ada rekomendasi yang tersedia untuk pengguna ini.")
+                     
+    if selected == "Profil Pengembang":
+        st.title(f"Profil Pengembang")
+    # Additional description
+        st.write("""
+            Berikut adalah profil dari tim pengembang yang berkontribusi dalam pembuatan website ini:
+
+        - **Ifanda Ariel Pradana Aji** - Universitas PGRI Yogyakarta
+        - **Ilham Ramadhan** - Universitas Negeri Semarang
+        - **Thadeo Miftakhul Fauzi** - Universitas Islam Sultan Agung
+        - **Novita Nur Alifah** - Universitas Cendekia Abditama
+        - **Devi Koestri Elviani** - Universitas Negeri Jember
+        """)                 
 
 
         if __name__ == "__main__":
