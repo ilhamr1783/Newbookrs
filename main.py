@@ -37,7 +37,7 @@ if authentication_status:
 
     with st.sidebar:
         selected = option_menu(
-        menu_title="Main Menu",  # required
+        menu_title="Menu Utama",  # required
         options=["Home", "Latar Belakang", "Unique Value", "Buku Untuk Kamu", "Profil Pengembang"],
         )# required
     
