@@ -108,6 +108,17 @@ if authentication_status:
                    background-color: white; /* White background for image container */
                    border-radius: 0 0 0 10px; /* Add rounded corners to bottom left */
                }
+               .footer {
+                   position: fixed;
+                   bottom: 0;
+                   width: 100%;
+                   background-color: #f1f1f1;
+                   text-align: center;
+                   padding: 10px;
+                }
+                .footer p {
+                   margin: 0;
+                }
                </style>
                """,
                unsafe_allow_html=True
