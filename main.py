@@ -37,14 +37,11 @@ if authentication_status:
 
     # Tambahkan kode aplikasi Streamlit Anda di sini
 
-    def streamlit_menu():
-    # horizontal menu w/o custom style
-        selected = option_menu(
-            menu_title=None,  # required
-            options=["Home", "Latar Belakang", "Unique Value"],  # required
-            orientation="horizontal",
-        )
-        return selected
+    with st.sidebar:
+            selected = option_menu(
+                menu_title="Main Menu",  # required
+                options=["Home", "Latar Belakang", "Contact"],
+            )# required
     
         if selected == "Home":
             st.title(f"Selamat Datang Di STARBOOK, A Book Recommendation Website {selected}")
