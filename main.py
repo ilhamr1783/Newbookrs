@@ -199,19 +199,19 @@ if authentication_status:
                     st.table(result)
                 else:
                     st.write("Tidak ada rekomendasi yang tersedia untuk pengguna ini.")
-                
-      if selected == "Profil Pengembang":
-           st.title(f"Mari berkenalan dengan kami {selected}")
+     
+     if selected == "Profil Pengembang":           
+          st.title(f"Mari berkenalan dengan kami {selected}")
    # Additional description
-           st.write("""
-               Berikut adalah profil dari tim pengembang yang berkontribusi dalam pembuatan website ini:
+          st.write("""
+          Berikut adalah profil dari tim pengembang yang berkontribusi dalam pembuatan website ini:
         
-               - **Ifanda Ariel Pradana Aji** - Universitas PGRI Yogyakarta
-               - **Ilham Ramadhan** - Universitas Negeri Semarang
-               - **Thadeo Miftakhul Fauzi** - Universitas Islam Sultan Agung
-               - **Novita Nur Alifah** - Universitas Cendekia Abditama
-               - **Devi Koestri Elviani** - Universitas Negeri Jember
-           """)
+          - **Ifanda Ariel Pradana Aji** - Universitas PGRI Yogyakarta
+          - **Ilham Ramadhan** - Universitas Negeri Semarang
+          - **Thadeo Miftakhul Fauzi** - Universitas Islam Sultan Agung
+          - **Novita Nur Alifah** - Universitas Cendekia Abditama
+          - **Devi Koestri Elviani** - Universitas Negeri Jember
+          """)
 
 
         if __name__ == "__main__":
