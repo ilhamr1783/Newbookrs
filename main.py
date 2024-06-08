@@ -200,7 +200,7 @@ if authentication_status:
                 else:
                     st.write("Tidak ada rekomendasi yang tersedia untuk pengguna ini.")
      
-     if selected == "Profil Pengembang":           
+     if selected == "Profil Pengembang":
           st.title(f"Mari berkenalan dengan kami {selected}")
    # Additional description
           st.write("""
