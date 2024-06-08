@@ -11,8 +11,8 @@ from pathlib import Path
 
      
 # --- USER AUTHENTICATION ---
-names = ["Peter Parker", "Rebecca Miller"]
-usernames = ["pparker", "rmiller"]
+names = ["Kelompok 23", "Team 23"]
+usernames = ["kelompok23", "team23"]
 
 
 # load hashed passwords
@@ -69,7 +69,7 @@ if authentication_status:
             - **Penemuan Baru:** Membantu pengguna menemukan buku dari genre atau penulis yang mungkin tidak mereka ketahui sebelumnya.
             """)
     if selected == "Buku Untuk Kamu":
-        st.title(f"Temukan Rekomendasi Buku Untuk Kamu {selected}")
+        st.title(f"Temukan Rekomendasi Buku Untuk Kamu")
         st.markdown(
             """
             <style>
@@ -114,7 +114,13 @@ if authentication_status:
                     <h1 style='margin: 0;'>Book Recommendation System</h1>
             </div>
         """, unsafe_allow_html=True)
-    
+
+         # Footer
+        st.markdown("""
+               <div class="footer">
+                   <p>Developed with ❤ by Team 23</p>
+            </div> 
+        """, unsafe_allow_html=True)
     
             # Create functions to open each social media app
         def open_app(app_name):
