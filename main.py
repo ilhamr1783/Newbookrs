@@ -93,7 +93,7 @@ if authentication_status:
                 color: black; /* Set text color */
             }            
            .st-cx {
-                background-color: white; /* White background for chat messages */
+                background-color: white; /* Black background for chat messages */
             }
                .sidebar .block-container {
                    background-color: #f0f0f0; /* Light gray background for sidebar */
