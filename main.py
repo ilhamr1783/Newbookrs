@@ -36,10 +36,7 @@ if authentication_status:
     # horizontal menu w/o custom style
         selected = option_menu(
             menu_title=None,  # required
-            options=["Home", "Projects", "Contact"],  # required
-            icons=["house", "book", "envelope"],  # optional
-            menu_icon="cast",  # optional
-            default_index=0,  # optional
+            options=["Home", "Latar Belakang", "Unique Value"],  # required
             orientation="horizontal",
         )
         return selected
