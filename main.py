@@ -38,7 +38,7 @@ if authentication_status:
     with st.sidebar:
         selected = option_menu(
         menu_title="Main Menu",  # required
-        options=["Home", "Latar Belakang", "Contact"],
+        options=["Home", "Latar Belakang", "Unique Value", "Buku Untuk Kamu"],
         )# required
     
     if selected == "Home":
@@ -199,19 +199,6 @@ if authentication_status:
                     st.table(result)
                 else:
                     st.write("Tidak ada rekomendasi yang tersedia untuk pengguna ini.")
-     
-     if selected == "Profil Pengembang":
-          st.title(f"Mari berkenalan dengan kami {selected}")
-   # Additional description
-          st.write("""
-          Berikut adalah profil dari tim pengembang yang berkontribusi dalam pembuatan website ini:
-        
-          - **Ifanda Ariel Pradana Aji** - Universitas PGRI Yogyakarta
-          - **Ilham Ramadhan** - Universitas Negeri Semarang
-          - **Thadeo Miftakhul Fauzi** - Universitas Islam Sultan Agung
-          - **Novita Nur Alifah** - Universitas Cendekia Abditama
-          - **Devi Koestri Elviani** - Universitas Negeri Jember
-          """)
 
 
         if __name__ == "__main__":
