@@ -225,7 +225,18 @@ if authentication_status:
         - **Thadeo Miftakhul Fauzi** - UI/UX Deigner & Programmer 
         - **Novita Nur Alifah** - Web Developer & Programmer
         - **Devi Koestri Elviani** - Business Analyst
-        """)                 
+        """)
+        # Appreciation section
+        st.header("Ucapan Terima Kasih")
+        st.write("""
+            Kami mengucapkan terima kasih kepada:
+
+        - **Kampus Merdeka** - atas dukungan dan kesempatan yang diberikan dalam mengembangkan keterampilan kami.
+        - **Skilvul** - atas platform pembelajaran yang luar biasa yang membantu kami dalam pengembangan website ini.
+        - **IBM** - atas bimbingan dan sumber daya teknis yang diberikan untuk memastikan kualitas dan keandalan website ini.
+
+        Tanpa dukungan dan kolaborasi dari mereka, proyek ini tidak akan mungkin terwujud. Terima kasih!
+        """) 
 
 
      
