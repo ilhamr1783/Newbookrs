@@ -87,7 +87,7 @@ if authentication_status:
                    background-color: #eeeeee; /* White background for widgets */
             }
             .st-cq {
-                background-color: #cccccc; /* Gray background for chat input */
+                background-color: #cccccc; /* Blue background for chat input */
                 border-radius: 10px; /* Add rounded corners */
                 padding: 8px 12px; /* Add padding for input text */
                 color: black; /* Set text color */
