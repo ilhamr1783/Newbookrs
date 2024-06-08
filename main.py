@@ -32,6 +32,10 @@ if authentication_status == None:
 
 if authentication_status:
 
+    def main():
+    st.title("STARBOOK")
+    # Tambahkan kode aplikasi Streamlit Anda di sini
+
     def streamlit_menu():
     # horizontal menu w/o custom style
         selected = option_menu(
@@ -214,9 +218,6 @@ if authentication_status:
                 - **Devi Koestri Elviani** - Universitas Negeri Jember
             """)
 
-def main():
-    st.title("Aplikasi Streamlit Saya")
-    # Tambahkan kode aplikasi Streamlit Anda di sini
 
 if __name__ == "__main__":
     main()
